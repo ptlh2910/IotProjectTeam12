@@ -10,24 +10,20 @@ GET_TIMER_STATE = 4;
 
 module.exports = {
     get: (req, res) => {
-        console.log("GET RECEIVED.");
         let data = req.body;
         let st = "";
+        if (!data.cmd) {
+            st = mgr.getSwitchStateString();
+            // return;
+        }
         switch (data.cmd) {
             case GET_SWITCHES_STATE:
-                for (let i = 0; i <= mgr.NUMBER_OF_SWITCH - 1; i++)
-                    st += mgr.getDeviceState(i);
+                st = mgr.getSwitchStateString();
                 break;
             case GET_TIMER_STATE:
-                for (let i = 0; i <= mgr.getTimer().length - 1; i++) {
-                    let timer = mgr._timers[i];
-                    st += timer.getDeviceID() + ":" + timer.getVal() + ":" + timer.getTime();
-                    if (i < mgr.getTimer().length - 1)
-                        st += '|';
-                }
+                st = mgr.getTimerString();
                 break;
         }
-        console.log(st);
         res.send(st);
     },
     post: (req, res) => {
@@ -36,7 +32,7 @@ module.exports = {
         switch (data.cmd) {
             case SET_DEVICE:
                 id = data.id;
-                val = data.val;
+                val = data.val; // 0 - 1
                 mgr.setDeviceState(id, val);
                 break;
             case ADD_TIMER:

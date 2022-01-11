@@ -3,7 +3,6 @@ var Timer = require("./Timer")
 
 class Manager {
     constructor() {
-        console.log("INITED");
         this.NUMBER_OF_SWITCH = 5;
         this.last = 0;
         this.state = Array(this.NUMBER_OF_SWITCH).fill(0);
@@ -49,6 +48,24 @@ class Manager {
             st += this.getDeviceState(i);
         }
         console.log("Current state : ", st);
+    }
+
+    getSwitchStateString() {
+        let st = "";
+        for (let i = 0; i <= mgr.NUMBER_OF_SWITCH - 1; i++)
+            st += mgr.getDeviceState(i);
+        return st;
+    }
+
+    getTimerString() {
+        let st = "";
+        for (let i = 0; i <= mgr.getTimer().length - 1; i++) {
+            let timer = mgr._timers[i];
+            st += timer.getDeviceID() + ":" + timer.getVal() + ":" + timer.getTime();
+            if (i < mgr.getTimer().length - 1)
+                st += '|';
+        }
+        return st;
     }
 }
 
