@@ -85,9 +85,6 @@ function Menus(props) {
           <Menu.Item key="/profile" icon={<UserOutlined />}>
             <NavLink to="/profile">Profile</NavLink>
           </Menu.Item>
-          <Menu.Item key="/test" icon={<SettingOutlined />}>
-            <NavLink to="/test">Test</NavLink>
-          </Menu.Item>
         </Menu>
       </Sider>
       <Layout className="site-layout" style={{}}>

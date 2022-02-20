@@ -12,22 +12,16 @@ const Home = lazy( () => import("routers/HomeRoute"));
 const Rooms = lazy( () => import("routers/RoomsRoute"));
 const Deveices = lazy( () => import("routers/DeveicesRoute"));
 const Profile = lazy( () => import("routers/ProfileRoute"));
-const Test = lazy( () => import("routers/TestRoute"));
-
 
 function MainAppRoutes(props) {
   return (
     <Menus>
       <Suspense fallback={<Loading />}>
         <Switch>
-          <PrivateRoute component={Home} exact path="/" />
-          <PrivateRoute component={Rooms} path="/rooms" />
-          <PrivateRoute component={Deveices} path="/deveices" />
-          <PrivateRoute component={Profile} path="/profile" />
-          
-          
-
-          <PrivateRoute component={Test} path="/test" />
+          <Route component={Home} exact path="/" />
+          <Route component={Rooms} path="/rooms" />
+          <Route component={Deveices} path="/deveices" />
+          <Route component={Profile} path="/profile" />
 
           <Route component={ErrorNotFound} path="*" />
         </Switch>

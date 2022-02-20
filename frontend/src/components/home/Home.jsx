@@ -13,7 +13,7 @@ import "./Home.css";
 import { Card as CardAntd } from "antd";
 
 const imgHome = `${process.env.PUBLIC_URL}image/home.jpg`;
-const imgModelHome = `${process.env.PUBLIC_URL}image/model_home.jpg`;
+const imgModelHome = `${process.env.PUBLIC_URL}image/home2.jpg`;
 
 const { Meta } = CardAntd;
 
@@ -35,28 +35,10 @@ function Home(props) {
               hoverable
             //   style={{ width: "540px", height: "312px", marginBottom: "15px" }}
             >
-              <Typography gutterBottom variant="h5" component="p">
-                Information about your smart home
-              </Typography>
-              <Typography gutterBottom variant="body1" component="p">
-                - Smart Home
-              </Typography>
-              <Typography gutterBottom variant="body1" component="p">
-                - Interactive security
-              </Typography>
-              <Typography gutterBottom variant="body1" component="p">
-                - Video monitoring
-              </Typography>
-              <Typography gutterBottom variant="body1" component="p">
-                - Remote energy management
-              </Typography>
-              <Typography gutterBottom variant="body1" component="p">
-                - Intelligent home
-              </Typography>
-
-              <Typography gutterBottom variant="body1" component="p">
-                - Product showcase
-              </Typography>
+              <h1>Smart Home 1:</h1>
+              <p>The house consists of two roofs stretching down to a narrow area, the whole house is painted white, combined with many layers of glass and large cedar wood panels.</p>
+              <p>In the middle of the house is a smartly designed high space that runs the entire length of the house, linking all other spaces of the house. Create harmony between the front and back of the house.</p>
+              <p>The basement of the house is designed differently to help light penetrate deeply, ensuring a living space filled with natural light throughout the day.</p>
             </CardAntd>
           </Row>
 
@@ -65,39 +47,10 @@ function Home(props) {
               hoverable
               style={{ height: "380px"}}
             >
-              <Typography gutterBottom variant="h5" component="p">
-                Benefits of smart home for you
-              </Typography>
-              <Typography gutterBottom variant="body1" component="p">
-                - Great Potential in Saving Energy and Money
-              </Typography>
-              <Typography gutterBottom variant="body1" component="p">
-                - Extreme Convenience
-              </Typography>
-              <Typography gutterBottom variant="body1" component="p">
-                - Boost Your Home Security
-              </Typography>
-              <Typography gutterBottom variant="body1" component="p">
-                - Home Security Awareness with Security Cameras
-              </Typography>
-              <Typography gutterBottom variant="body1" component="p">
-                - Safety on Your Appliances and Lighting System
-              </Typography>
-              <Typography gutterBottom variant="body1" component="p">
-                - It Can Help Save Precious Time
-              </Typography>
-              <Typography gutterBottom variant="body1" component="p">
-                - Contributes to the Economy
-              </Typography>
-              <Typography gutterBottom variant="body1" component="p">
-                - Full Control When Your Out of Town
-              </Typography>
-              <Typography gutterBottom variant="body1" component="p">
-                - Keep An Eye on Your Kids
-              </Typography>
-              <Typography gutterBottom variant="body1" component="p">
-                - Increases Promotes Peace of Mind
-              </Typography>
+              <h1>Smart Home 2:</h1>
+              <p>The house is built on a hill at an altitude of 1000m in a town in the state of New South Wales. This is the expression of the originality of rural life.</p>
+              <p>In winter the entire valley is surrounded by fog, but the house is kept warm thanks to the smart design that helps to store solar energy, and the heating system.</p>
+              <p>Smart devices in the home control the lighting and sound systems in the house, making the home smarter.</p>
             </CardAntd>
           </Row>
         </Col>
@@ -109,9 +62,9 @@ function Home(props) {
                 <CardMedia
                   component="img"
                   alt="Image smart home"
-                  height="240"
+                  height="288"
                   image={imgHome}
-                  title="Image smart home"
+                  title="Smart home 1"
                 />
                 <CardContent>
                   <Typography
@@ -120,7 +73,7 @@ function Home(props) {
                     component="h2"
                     align="center"
                   >
-                    Smart Home
+                    Smart Home 1
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -133,9 +86,9 @@ function Home(props) {
                 <CardMedia
                   component="img"
                   alt="Image smart home"
-                  height="306"
+                  height="288"
                   image={imgModelHome}
-                  title="Modeling of smart home"
+                  title="Smart home 2"
                 />
                 <CardContent>
                   <Typography
@@ -144,7 +97,7 @@ function Home(props) {
                     component="h2"
                     align="center"
                   >
-                    Modeling of smart home
+                    Smart home 2
                   </Typography>
                 </CardContent>
               </CardActionArea>

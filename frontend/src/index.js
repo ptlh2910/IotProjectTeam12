@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import "antd/dist/antd.css";
 import 'ant-design-pro/dist/ant-design-pro.css';
 
-ReactDOM.render(
+  ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
